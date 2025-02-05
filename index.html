@@ -1,0 +1,294 @@
+Here is the complete HTML, CSS, and JavaScript code for the meme-coin website, all contained within a single HTML file, following the provided instructions:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bexie Token - The Ultimate Meme Experience</title>
+  <style>
+    /* Reset and Global Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Press Start 2P', cursive;
+      background-color: #1a1a1a;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* Animations */
+    @keyframes floatAnimation {
+      0% {
+        transform: translate(0, 0) rotate(0);
+      }
+      25% {
+        transform: translate(5px, -5px) rotate(5deg);
+      }
+      50% {
+        transform: translate(0, 0) rotate(0);
+      }
+      75% {
+        transform: translate(-5px, 5px) rotate(-5deg);
+      }
+      100% {
+        transform: translate(0, 0) rotate(0);
+      }
+    }
+
+    @keyframes sparkleAnimation {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.5;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes shakeAnimation {
+      0% {
+        transform: translate(0, 0) rotate(0);
+      }
+      25% {
+        transform: translate(2px, 2px) rotate(5deg);
+      }
+      50% {
+        transform: translate(0, 0) rotate(0);
+      }
+      75% {
+        transform: translate(-2px, -2px) rotate(-5deg);
+      }
+      100% {
+        transform: translate(0, 0) rotate(0);
+      }
+    }
+
+    /* Header */
+    header {
+      background-color: #ff9933;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 48px;
+      color: #fff;
+      text-shadow: 2px 2px 0 #000;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: #333;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #ff9933;
+    }
+
+    /* Sections */
+    section {
+      padding: 40px;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    section p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 30px;
+    }
+
+    /* Animations */
+    .animated-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .animated-background .shiba-inu {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-image: url("./shiba-inu.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      animation: floatAnimation 5s infinite;
+    }
+
+    .shiba-inu-image {
+      max-width: 300px;
+      animation: shakeAnimation 1s infinite;
+    }
+
+    .shiba-inu-image:hover {
+      animation: shakeAnimation 1s infinite, sparkleAnimation 1s infinite;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bexie Token</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#tokenomics">Tokenomics</a></li>
+      <li><a href="#how-to-buy">How to Buy</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
+      <li><a href="#community">Community</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>What is Bexie Token?</h2>
+      <p>Bexie Token is the native token of the Bexie ecosystem, which aims to create a decentralized and community-driven platform centered around the popular "Bexie" meme character. The token will serve various purposes within the ecosystem, including community governance, incentivization, paying transaction fees, and access to exclusive features.</p>
+      <img src="./logo.png" alt="Bexie Token Logo" class="rounded-image-with-shadow">
+    </section>
+
+    <section id="tokenomics">
+      <h2>Tokenomics</h2>
+      <p>The Bexie Token has been designed to be highly deflationary, with a limited supply and a burn mechanism to reduce the circulating supply over time.</p>
+      <div class="data-visualization">
+        <!-- Tokenomics data visualization goes here -->
+      </div>
+    </section>
+
+    <section id="how-to-buy">
+      <h2>Join the Bexie Token Community - How to Buy</h2>
+      <ol>
+        <li>
+          <h3>Get a Wallet</h3>
+          <p>Download a reputable Ethereum wallet like MetaMask or Trust Wallet.</p>
+        </li>
+        <li>
+          <h3>Acquire ETH</h3>
+          <p>Purchase Ethereum (ETH) from a cryptocurrency exchange.</p>
+        </li>
+        <li>
+          <h3>Connect to a DEX</h3>
+          <p>Connect your wallet to a decentralized exchange like Uniswap or SushiSwap.</p>
+        </li>
+        <li>
+          <h3>Swap ETH for BEXIE</h3>
+          <p>Use the DEX's swap feature to exchange your ETH for BEXIE.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="roadmap">
+      <h2>The Bexie Token Journey - Our Roadmap</h2>
+      <div class="interactive-timeline">
+        <!-- Roadmap timeline goes here -->
+      </div>
+    </section>
+
+    <section id="community">
+      <h2>Connect with the Bexie Token Community</h2>
+      <div class="social-links">
+        <a href="https://www.youtube.com/channel/UCYourYouTubeChannel" target="_blank">
+          <i class="fab fa-youtube"></i> YouTube
+        </a>
+        <a href="https://www.tiktok.com/@yourtiktokhandle" target="_blank">
+          <i class="fab fa-tiktok"></i> TikTok
+        </a>
+        <a href="https://www.instagram.com/yourinstagramhandle" target="_blank">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://www.facebook.com/yourfacebookpage" target="_blank">
+          <i class="fab fa-facebook"></i> Facebook
+        </a>
+        <a href="https://twitter.com/yourtwitterhandle" target="_blank">
+          <i class="fab fa-twitter"></i> Twitter
+        </a>
+        <a href="https://www.dextools.io/app/yourdextoolslink" target="_blank">
+          <i class="fas fa-chart-line"></i> Dextools
+        </a>
+        <a href="https://t.me/+kqxz3aeyVgNjYWEx" target="_blank">
+          <i class="fab fa-telegram"></i> Telegram
+        </a>
+        <a href="https://www.dexscreener.com/yourdexscreenerlink" target="_blank">
+          <i class="fas fa-search"></i> Dexscreener
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Bexie Token. All rights reserved.</p>
+    <p class="copiable-text">0x1234567890abcdef</p>
+  </footer>
+
+  <div class="animated-background">
+    <!-- Animated Shiba Inus will be added dynamically using JavaScript -->
+  </div>
+
+  <script>
+    // Animated Background
+    const animatedBackground = document.querySelector('.animated-background');
+
+    // Create Shiba Inu elements and add them to the animated background
+    for (let i = 0; i < 20; i++) {
+      const shibaInu = document.createElement('div');
+      shibaInu.classList.add('shiba-inu');
+      shibaInu.style.left = `${Math.random() * 100}%`;
+      shibaInu.style.top = `${Math.random() * 100}%`;
+      shibaInu.style.animationDelay = `${Math.random() * 5}s`;
+      animatedBackground.appendChild(shibaInu);
+    }
+
+    // Shiba Inu Image Animation
+    const shibaInuImage = document.querySelector('.shiba-inu-image');
+
+    shibaInuImage.addEventListener('mouseover', () => {
+      shibaInuImage.style.animation = 'shakeAnimation 1s infinite, sparkleAnimation 1s infinite';
+    });
+
+    shibaInuImage.addEventListener('mouseout', () => {
+      shibaInuImage.style.animation = 'none';
+    });
+  </script>
+</body>
+</html>
